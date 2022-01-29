@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+}
+
+/* Header start */
+
+/* .header {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    
+    height: 25vh;
+    background-image: url("../images/Chess-pieces-formation-42497-pixahive.jpg");
+    background-image: height 200px;
+  } */
+
+  .header-image {
+    background-image: url("../images/Chess-pieces-formation-42497-pixahive.jpg");
+    background-color: #cccccc;
+    height: 235px;
+    background-position: center;
+    position: relative;
+    opacity: 1;
+  }
+
+      .header-image2 {
+        background-image: url("../images/fideust_son.jpg");
+        background-color: #fff;
+        height: 150px;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        opacity: 1;
+      }
+  
+  .header-text {
+    text-align: center;
+    text-shadow: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #7b6565;
+    opacity: 1;
+    
+  }
+
+      .header-text:hover {
+        color: #fff;
+      }
+
+/* Header end */
+
+/* Navigation start */
+.navigation {
+    position: sticky;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    list-style: none;
+    margin: 0; 
+    background: rgb(58, 112, 129);
+  }
+
+    .navigation a {
+      text-decoration: none;
+      display: block;
+      padding: 1em;
+      color: white;
+    }
+    
+    .navigation a:hover {
+      background: #1565C0;
+    }
+
+.navigation2 {
+      /* position: sticky;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      list-style: none;
+      background: #fff; */
+    text-align: left;
+    text-shadow: black;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    /* transform: translate(-50%, -50%); */
+    color: #7b6565;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+
+    
+    }   
+
+/* Navigation end*/
+
+/* Table start*/
+
+.tableRating {
+  display: flex;
+  justify-content: center;
+}
+
+table, th, tr, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin: 10px;
+}
+
+    /* Rating table start*/
+    .fed {
+      display: flex;
+      width: 32px;
+      flex-direction: row;
+      align-items: center;
+    }
+
+      .fed > img {
+        margin: 5px;
+      }
+
+        .fed > img:hover {
+          transform: rotateY(360deg);
+          transition:  transform 1s;         
+        }
+
+        .fed > div:hover {
+        background-color: #969090;
+        transition: .6s;
+        color: #fff
+        }
+
+      
+
+      /* Rating table end*/
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* My Footer style */
+
+.wrapper > * {
+    flex: 1 100%;
+  }
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(20, 57, 59);
+  color: white;
+  
+  display: flex;
+  height: 15vh;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.footerItem {
+    margin: auto;
+}
+
+.footer2 {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(5, 15, 15);
+    color: white;
+
+    display: flex;
+    height: 20px;
+    flex-flow: row wrap;
+    justify-content: space-around;
+
+    margin: auto;
+    outline: -webkit-focus-ring-color auto 1px;
+}
+
+/* Footer end */
+
+/* @Media */
+
+@media all and (max-width: 600px) and (max-height: 800px) {
+        .footer { 
+
+            flex-direction: column;
+            height: 200px;
+        
+        }
+
+        }

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./HomeWork2-1st.css">
+</head>
+<body>
+
+    <form name="myForm" method="POST" class="myForm" action="https://script.google.com/macros/s/AKfycbxapPz3Xnyl5wTnwBwXnD_b47YWkFYjj1WiYpVhGDet_-R5dNz6hyA-_xImBuuCa3DYYw/exec" target="_blank">
+
+        
+        
+      <label for="name">Name</label>
+        <input type="text" id="name" name="Name" placeholder="Name Surname" required>
+
+        <label for="phone">Phone</label>
+        <input type="tel" name="Phone" id="phone" pattern="[+]{1}[0-9]{3}-[0-9]{2}-[0-9]{3}-[0-9]{3}" placeholder="Format: +374-98-000-000" required> 
+
+        <label for="email">Email</label>
+        <input type="email" name="Email" id="email">
+
+       
+        <label for="birthday">Birthday</label>
+        <input type="date" name="Birthday" id="birthday" required>
+
+        <legend>Gender</legend>
+        <label for="male" class="legend">Male</label>
+        <input type="radio" class="legend" name="Gender" id="male" value="male" checked>
+        <label for="female" class="legend">Female</label>
+        <input type="radio" class="legend" name="Gender" id="female" value="female">
+
+        <label for="adress">Address Line</label>
+        <input type="text" name="Address" id="address" placeholder="Address Line">
+
+        <label for="city">City</label>
+        <input type="text" id="city" name="City" placeholder="City">
+
+        <label for="State / Province">State / Province</label>
+        <input type="text" id="state" name="State" placeholder="State / Province">
+
+        <label for="Country">Country</label>
+        <input type="text" id="country" name="Country" placeholder="Country">
+
+             <!-- <label for="country">Choose your Country:</label>
+            <select id="country" name="country">
+            <option value="Armenia">Armenia</option>
+            <option value="Russia">Russia</option>
+            <option value="USA">USA</option>
+            <option value="France">France</option>
+            </select>  -->
+
+        <label for="image"></label>
+        <input type="file" name="Image" id="image">
+
+        <label for="submit"></label>
+        <input type="submit" value="Submit" id="submit"> 
+        <!-- <button type="submit">Send</button> -->
+
+
+      </form>
+
+    <table class="data">
+        <td colspan="2"><h2>Your Results: please check again</h2> <br> 
+        
+       <p class="warning">If something is wrong, please click this <br><input type="button" value="button"> and edit your data</p> 
+        </td>
+
+        <tr>
+            <th> Your Name</th>
+            <th class="ft_tbl_meta"></th>
+        </tr>
+
+        <tr>
+            <th>Your Phone</th>
+            <th class="ft_tbl_meta"></th>
+        </tr>
+
+        <tr>
+            <th>Your Email</th>
+            <th class="ft_tbl_meta"></th>
+        </tr>
+
+        <tr>
+            <th>Your Birthday</th>
+            <th class="ft_tbl_meta"></th>
+        </tr>
+
+        <tr>
+            <th>Your Gender</th>
+            <th class="ft_tbl_meta"></th>
+        </tr>
+
+        <tr>
+            <th>Your Address Line</th>
+            <th class="ft_tbl_meta"></th>
+        </tr>
+
+        <tr>
+            <th>Your City</th>
+            <th class="ft_tbl_meta"></th>
+        </tr>
+
+        <tr>
+            <th>Your State / Province</th>
+            <th class="ft_tbl_meta"></th>
+        </tr>
+
+        <tr>
+            <th>Your Country</th>
+            <th class="ft_tbl_meta"></th>
+        </tr>
+
+        <tr>
+            <th>Your Photo</th>
+            <th><img  id="img" src="#" class="ft_tbl_meta"/></th>
+        </tr>
+    </table>
+
+    <script src="./HomeWork2-1st.js"></script>
+</body>
+</html>

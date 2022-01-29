@@ -1,0 +1,52 @@
+label,
+legend
+ {
+    display: block;
+    font: 1rem 'Fira Sans', sans-serif, bolder;
+}
+
+input,
+label,
+legend {
+    margin-left: 10px;
+    margin-bottom: .4rem;
+}
+
+.legend {
+    display: inline-block;
+}
+
+
+form {
+    float: left;
+    width: 300px;
+    margin: 100px;
+    }
+
+    .data {
+        visibility: hidden;
+        margin-left: 300px;
+
+    }
+
+    th, tr {
+        padding: 15px;
+        text-align: left;
+        border: 2px solid black;
+        border-radius: 5px;
+
+      }
+
+      td {
+          text-align: center;
+      }
+
+      .warning {
+          color: brown;
+          font-weight: 800;
+      }
+
+      #img {
+          max-width: 250px;
+          max-height: 250px;
+      }

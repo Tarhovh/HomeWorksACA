@@ -1,0 +1,41 @@
+
+div {
+    border: 2px solid black;
+    margin: 10px;
+}
+
+#outerDiv {
+    width: 70%;
+    height: 350px;
+    background-color: gray;
+}
+
+#innerDiv {
+    width: 85%;
+    height: 250px;
+    margin: 15px;
+    background-color: white ;
+}
+
+#btnDiv {
+    width: 85%;
+    margin: 15px;
+} 
+
+input {
+    width: 70%;
+    height: 30px;
+    margin: 10px;
+}
+
+button {
+    margin-left: 50px;
+}
+
+#redBtn {
+    background-color: red;
+}
+
+#greenBtn {
+    background-color: green;
+}

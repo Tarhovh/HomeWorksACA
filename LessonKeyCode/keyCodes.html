@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .mainContainer {
+            width: 98%;
+            border-color: black;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .sticky {
+            display: flex;
+            /* flex-direction: column; */
+            /* transform: rotate(90deg); */
+            position: sticky;
+            margin-top: 100px;
+            margin-left: 0;
+            margin-right: 0;
+            padding: 0;            
+            top: 0;
+            left: 0;
+            background-color: rgb(47, 118, 128);
+            /* padding: 10px; */
+            /* font-size: 20px; */
+            /* text-align: center; */
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 60px;
+        }
+
+        
+    </style>
+
+</head>
+<body>
+
+
+
+<div class="mainContainer">
+    
+    <div class="container">
+        <h1>Events Type</h1>
+    </div>
+
+    <div class="keyCode">
+        <h1>Events keyCode</h1>
+    </div>
+
+    <div class="screen-log">
+        <h1>Events Coordinates</h1>
+    </div>
+
+    <div class="sticky"></div>
+</div>
+
+    <script src="./keyCodes.js"></script>
+</body>
+</html>
