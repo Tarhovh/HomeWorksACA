@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        form {
+            margin: 50px;
+        }
+        label {
+            font-size: 20px;
+        }
+
+        #button {
+            border-radius: 10px;
+            border: 1px solid black;
+            width: 60px;
+            height: 20px;
+            display: flex;
+        }
+
+        div > h2 {
+            margin-left: 80px;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <form action="">
+        <input type="text">
+        <button type="submit" id="button">Click</button>
+
+       
+    </form>
+
+    <div class="container">
+        Here you can see how many times button was clicked <br>
+        and how many times it was sent with debounce
+
+        <h3></h3>
+        
+        <h2></h2>
+    </div>
+    
+
+    <script src="./debounce.js"></script>
+</body>
+</html>
