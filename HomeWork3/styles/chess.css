@@ -1,0 +1,146 @@
+
+.chessboard {
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    width: 855px;
+    height: 855px;
+    margin: 20px;
+    border: 25px solid #333;
+}
+
+  .white {
+    width: 90px;
+    height: 90px;
+    background-color: #fff;
+    text-align:center;
+    font-size: 35px;
+  }
+
+  .black {
+    width: 90px;
+    height: 90px;
+    background-color: #999;
+    text-align:center;
+    font-size: 35px;
+  }
+
+  #other, th {
+      border: 3px solid black;
+      color: rgb(94, 26, 26);
+      font-size: 18px;
+
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* ul {
+      /* width: 1600px;
+      height: 1600px;
+      list-style: none;
+
+  }
+
+
+  .flex-container {
+    display: flex;
+    flex-direction: column; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-flow: column wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+  }
+
+  .black {
+    background-color: black;
+    
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    margin-top: 10px;
+    line-height: 150px;
+    display: inline-block;
+    flex-flow: column wrap;
+}
+
+.white {
+    background-color: rgb(226, 226, 144);
+  
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    margin-top: 10px;
+   line-height: 150px;
+   flex-flow: column wrap;
+   display: inline-block;
+}
+   */

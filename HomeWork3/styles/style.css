@@ -4,20 +4,10 @@
 
 /* Header start */
 
-/* .header {
-    text-align: center;
-    color: white;
-    font-size: 30px;
-    
-    height: 25vh;
-    background-image: url("../images/Chess-pieces-formation-42497-pixahive.jpg");
-    background-image: height 200px;
-  } */
-
   .header-image {
     background-image: url("../images/Chess-pieces-formation-42497-pixahive.jpg");
     background-color: #cccccc;
-    height: 235px;
+    height: 180px;
     background-position: center;
     position: relative;
     opacity: 1;
@@ -53,11 +43,12 @@
 
 /* Navigation start */
 .navigation {
+    overflow: hidden;
     position: sticky;
+    top: 0;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    list-style: none;
     margin: 0; 
     background: rgb(58, 112, 129);
   }
@@ -74,24 +65,16 @@
     }
 
 .navigation2 {
-      /* position: sticky;
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: center;
-      list-style: none;
-      background: #fff; */
+      
     text-align: left;
     text-shadow: black;
     position: absolute;
     top: 50%;
     left: 25%;
-    /* transform: translate(-50%, -50%); */
     color: #7b6565;
     list-style: none;
     display: flex;
     flex-direction: row;
-
-    
     }   
 
 /* Navigation end*/
@@ -100,29 +83,41 @@
 
 .tableRating {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  background-color: antiquewhite;
+}
+
+.widget {
+  align-self: flex-start;
+  margin-top: 50px;
 }
 
 table, th, tr, td {
-  border: 1px solid black;
+  align-self: center;
+  border: 1.5px solid black;
   border-collapse: collapse;
-  margin: 10px;
+  margin: 25px 0px 25px 0px;
+  text-align: center;
+  font-size: 18px;
+  background-color: #9b9696;
 }
 
     /* Rating table start*/
+
     .fed {
       display: flex;
-      width: 32px;
       flex-direction: row;
       align-items: center;
     }
 
       .fed > img {
+        width: 50px;
+        height: 50px;
         margin: 5px;
       }
 
         .fed > img:hover {
-          transform: rotateY(360deg);
+          transform:  scale(2);
           transition:  transform 1s;         
         }
 
@@ -132,54 +127,50 @@ table, th, tr, td {
         color: #fff
         }
 
-      
-
       /* Rating table end*/
 
-    
+    /* Article style Start */
 
+  .articleContainer {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(192, 234, 241);
+  }
 
+  .article {
+    /* font-size: 16px; */
+    color: gray;
+    max-width: 40em;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: fff;
+  }
 
+    .article > h1, h2 {
+      margin: 15px 15px 10px 25px;
+      justify-content: center;
+      text-align: center;
+    }
 
+    .article > p, p {
+      margin: 5px 15px 10px 15px;
+    }
 
+      .article > p:hover {
+        background-color: rgb(147, 199, 218);
+      }
 
+    .article > ul > ol {
+      margin: 10px;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  .article > img {
+    margin: 5px 5px 10px 5px;
+    height: 500px;
+    align-self: center;
+  }
 
 
 /* My Footer style */
@@ -189,7 +180,6 @@ table, th, tr, td {
   }
 
 .footer {
-  position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -197,7 +187,7 @@ table, th, tr, td {
   color: white;
   
   display: flex;
-  height: 15vh;
+  height: 12vh;
   flex-flow: row wrap;
   justify-content: space-around;
 }
@@ -207,7 +197,6 @@ table, th, tr, td {
 }
 
 .footer2 {
-    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -219,7 +208,7 @@ table, th, tr, td {
     flex-flow: row wrap;
     justify-content: space-around;
 
-    margin: auto;
+    /* margin: auto; */
     outline: -webkit-focus-ring-color auto 1px;
 }
 
@@ -234,5 +223,7 @@ table, th, tr, td {
             height: 200px;
         
         }
+
+
 
         }

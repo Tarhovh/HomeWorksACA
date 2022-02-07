@@ -1,3 +1,8 @@
+/*
+► Ex 3 Done!
+► Ex 4 Done!
+*/
+
 // 3. Find index of number where sorting order is violeted
 
 const sortedArr1 = [2, 12, 15, 48, 64];
@@ -6,14 +11,11 @@ const sortedArr2 = [-9, -4, -4, 3, 12, 4, 5];
 
 function fin (array) {    
 
-    // debugger
     for (i=0; i<array.length; ++i) {
 
         if (array[i] > array[i+1]) {
 
             return i+1;
-            // if (i+1 !== undefined) {
-            // return i+1}  
         }
 
         else if (array[i] < array[i+1]) 

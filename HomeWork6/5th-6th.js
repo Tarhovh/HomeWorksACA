@@ -1,3 +1,8 @@
+/*
+► Ex 5 Done!
+► Ex 6 Done!
+*/
+
 // 5th. Flatten nested array with recursion
 
 const nested1 = [1, [3, 4, [1,2]], 10];
@@ -30,153 +35,31 @@ function flatten (array) {
 console.log(flatten(nested1))
 console.log(flatten(nested2))
 
-//// աշխատանքային տարբերակ
-
-// function flatten (array, help) {
-
-//     let arr = [];
-    
-//     help (array, 0)
-    
-//     function help (array, i){
-    
-//         if (i === array.length) 
-//     {
-//         return array
-//     }
-
-//     else if (i <= array.length) {
-
-//         array[i] = array[i+1]
-        
-//         help(array, i+1);
-
-//         let element = array[i];
-        
-//         if (Array.isArray(element)) {
-//                return help(element)
-//             } else 
-//             {
-//             arr.push(element, i+1);
-//             }
-        
-//         }
-        
-//     }
-//     return arr;
-// }
-    
-// console.log(flatten(nested1))
-// console.log(flatten(nested2))
-
 
                 console.log('------end of 5th ----')
 
-// 6th. 
+// 6th. Rec function that rotates an Arr 
+//      N places to left (use arr.unshift())
 
+//['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'] 3 ► ['d', 'e', 'f', 'g', 'h', 'a', 'b', 'c']
+//['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'] -2 ► ['g', 'h', 'a', 'b', 'c', 'd', 'e', 'f']
 
+const rotateArr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
 
-// 7th.
+function rotateLeft (a, n) {
 
-const number1 = 14;
-const number2 = 29;
-const number3 = 999999999999;
+    if (n===a.length) return a;
 
-function sum (num) {
+    else if (n<a.length) {
+        
+        a.unshift(a.pop(n))
 
-    num = num.toString().split("")
+        rotateLeft(a, n+1)
 
-    for (i=0; i<num.length; i++) {
+    }; return a;
+};
 
-        if ((+num[i] + +num[i+1]) < 10) {
+ console.log(rotateLeft(rotateArr, 3))
+//  console.log(rotateLeft(rotateArr, -2)) 
 
-              return num = +num[i] + +num[i+1];}
-
-        else if ((+num[i] + +num[i+1]) > 10) {
-                
-            num = +num[i] + +num[i+1];
-
-            return sum(num)
-        };
-
-    }
-}
-
-console.log(sum(number1))
-console.log(sum(number2))
-console.log(sum(number3))
-
-console.log('------end of 7th ----')
-
-// 8th Deep clone OBJ with recursive function
-
-const myCompany = {
-    head: "Poghos",
-    deputyHead: "Petros",
-    budjet: "$15000000",
-    subBudjet: {
-        sallery: "10000000",
-        other: "5000000",
-    },
-    personal: "280",
-}
-
-let myClone = {}
-
-
-// function ObjClone(myOBJ) {
-
-//     for (let key in myOBJ) {
-//         if (myOBJ.hasOwnProperty(key)) {
-//         myClone[key] = myOBJ[key];
-
-//         // myClone.head = 'Pilipos';
-//         // ((myClone || {}).subBudjet || {}).sallery = "$9000000";
-//         // ((myClone || {}).subBudjet || {}).other = "$6000000"
-//        }
-      
-//       }
-//       return myClone
-      
-// }
-
-// console.log(ObjClone(myCompany))
-
-
-console.log(ObjClone(myCompany))
-
-/////////////////////////////////////////////////
-
-
-function ObjClone(myOBJ, newObj) {
-
-    
-
-    let myEntries = Object.keys(myOBJ)
-
-    let mybla = Object.values(myOBJ)
-
-    let myClone = {}
-
-    newObj(myEntries, myClone, 0, 0)
-    
-    function newObj (myEntries, myClone, ke, value) {
-
-        if (ke === mybla.length && value ===myEntries.length) {
-          
-            return myClone
-        }
-
-        else if (ke < mybla.length && value < myEntries.length) {
-
-            myClone[value] = mybla[value]
-
-            return newObj (myEntries, myClone, ke+1, value+1)
-        }
-       
-    } 
-      return myClone;
-}
-
-console.log(ObjClone(myCompany))
-
+             console.log('------end of 6th ----')

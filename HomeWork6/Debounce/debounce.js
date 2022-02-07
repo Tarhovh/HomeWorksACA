@@ -22,7 +22,7 @@ function debounce(fn, ms){
 
   }
   
-  const processChange = debounce(() => send(),200);
+  const processChange = debounce(() => send(),2000);
 
 
   button.addEventListener('click', processChange)
