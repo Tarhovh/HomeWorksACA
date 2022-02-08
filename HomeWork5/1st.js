@@ -2,86 +2,172 @@
 
 // Concat
 
+console. log ('----- Concat start----')
+
 const myArr = [1, 2];
 const myArr0 = [3, 4];
-const myArr3 = ['a', 'b']
+const myArr3 = ['a', 'b', [2]]
 
-const concatedArr = myArr.concat(myArr0)
+function concat (...arrays) {
+    let newarr = [];
 
-    console.log(concatedArr)
-
-const newConcatedArr = myArr.concat(myArr0, myArr3)
-
-    console.log(newConcatedArr)
-
-// Fill 
-
-const filledArr = concatedArr.fill(2, 3, 4)
-
-    console.log (filledArr)
-
-const filledArr2 = newConcatedArr.fill(5, 5, 6)
-
-    console.log(filledArr2)
-
-console.log (Array(8).fill(5))
-
-// Find
-
-const arr10 = ['a', 'b', 'g', , 2, ,];
-
-arr10.find((value, index) => {
-
-    if (value === undefined) 
-    console.log('index ', index, ' value ', '"no value"')
-
-    else
-  console.log('index ', index, ' value ', value);
-});
-
-const findArr = concatedArr.find((value) => value > 2)
-
-console.log(findArr)
-
-// FindIndex
-
-function notPrime (number) {
-    for (let i=2; number > i; i++) {
-        if (number % 2 !== 0) 
-        return false
-    }
-
-    return number > 1
+    for (i=0; i<arrays.length; i++) {
+        newarr.push(...arrays[i])
+    }; 
+    return newarr
 }
 
-console.log([3, 5, 7, 8].findIndex(notPrime))
+console.log(concat(myArr, myArr0, myArr3))
 
-const cars = ['BMW', 'Cadillac', 'Ford', 'Dodge', 'Mercedes']
+// Fill 
+console. log ('----- Fill start----')
+
+const fillArr = [0,3,5,6,7]
+
+function fill (array, n, startIndex, endIndex) {
+
+    for (let i=0; i<array.length; i++) {
+
+        if (i>=startIndex) {
+
+            if (endIndex !== undefined && i<=endIndex) {
+           array[i] = n;}
+
+           else if (endIndex === undefined) {
+               array[i] = n;
+           }
+        }
+
+        else if (startIndex === undefined) {
+            array[i] = n
+        }
+
+    } return array
+
+}
+
+// console.log(fill(fillArr, 4))
+// console.log(fill(fillArr, 4, 1))
+console.log(fill(fillArr, 4,1,3))
 
 
-const findCar = cars.findIndex((car, index) => {
- if (car === 'Dodge')
+// Find
+console. log ('----- Find start----')
 
- console.log('index ', index, ' car ', `'${car}'`)
-})
+const arr10 = ['a', 'b', 'g', 'a', 'Hello',];
+const inventory = [
+    {name: 'apples', quantity: 9},
+    {name: 'bananas', quantity: 8},
+    {name: 'cherries', quantity: 10}
+  ];
 
+function find (object, value) {
+    
+    let status = `-1: No '${value}'`;
+
+    if (Array.isArray) {
+
+        for (i=0; i<object.length; i++) {
+
+            if (object[i] == value) {
+                status = `'${object[i]}' found` ;
+                    break;
+            }
+
+            else if (object[i].name == value) {
+                status = `'${object[i].name}' found`;
+                break;
+            }
+
+            else if (object[i].quantity === value) {
+                status = `'${object[i].quantity}' found`;
+                break;
+            }
+        }
+     }
+
+    return status
+}
+
+console.log(find(arr10, 'Hello'))
+console.log(find(inventory, 'bananas'))
+
+// FindIndex
+console. log ('----- FindIndex start----')
+
+let arr11 = [1, 2, 6, 9, 15, 4]
+
+function findIndex (object, value) {
+
+    let status = `-1 `;
+
+    if (Array.isArray) {
+
+        for (i=0; i < object.length; i++) {
+
+            if (object[i] < value) {
+                status = `'${object[i]}' at Index '${i}' is smaller than '${value}'` ;
+                    break;
+            }
+
+            else if (object[i].quantity < value) {
+                status = `'${object[i].quantity}' at Index '${i}' is smaller than '${value}'` ;
+                break;
+            }
+        }
+     }
+
+    return status
+}
+
+console.log(findIndex(arr11, 10))
+console.log(findIndex(inventory, 10))
 
 // Flat
+console. log ('----- flat start----')
 
 let arr5 = ['Math', 'History', 'Geography', ['Other', ['Other2', ['Math']]]]
 
-flatedArr = arr5.flat(Infinity)
+function flat (array) {
 
-console.log(flatedArr)
+    let arr = [];
+    
+    function help (array) {
+    
+        for (let i=0; i<array.length; i++) 
+        {
+            let element = array[i];
+        
+            if (Array.isArray(element)) {
+                help(element);
+            } else 
+            {
+            arr.push(element);
+            }
+        }
+    }
+    
+    help(array);
+    
+    return arr;
+}
 
+console.log(flat(arr5))
 
 // Map
+console. log ('----- Map start----')
 
 const arrForMap = [1, 5, 6, 10]
 
-const myMap = arrForMap.map(element => element * 5)
+function map (array) {
 
-console.log(myMap)
+    for (i=0; i<array.length; i++) {
+       array[i] *= 5
+    }
+   return array
+}
+
+console.log(map(arrForMap))
 
 const objArray = [
     {id: 1, val: 3},
@@ -89,31 +175,36 @@ const objArray = [
     {id: 3, val: 7}
 ]
 
-const formatedObjArr = objArray.map(obj => {
-    let formObj = {}
+function myMap (object) {
 
-    formObj[obj.id] = obj.val;
+    let formObject = {}
 
-    return formObj
-})
+    for (i=0; i < object.length; i++) {
 
-console.log(formatedObjArr)
+        formObject[object[i].val] = object[i].val
 
+    }
+    return formObject
+}
+
+console.log(myMap(objArray))
 
 // reduce
+console. log ('----- Reduce start----')
 
 const reduceArr = [3, 5, 7, 9, 14]
 
-function reducer(previous, current) {
+function reduce (array) {
+    let value = 0;
 
-    const reduced = previous + current;
+    for (let i = 0; i < array.length; i++) {
+        value += array[i]
+    }
 
-    console.log(`previous ► ${previous} || current ► ${current}`)
-
-    return reduced;
+    return value
 }
 
-console.log(reduceArr.reduce(reducer))
+console.log(reduce(reduceArr))
 
 
 console.log('-------------End of the First ex ----------------')
