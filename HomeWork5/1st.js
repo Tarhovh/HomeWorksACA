@@ -159,15 +159,15 @@ console. log ('----- Map start----')
 
 const arrForMap = [1, 5, 6, 10]
 
-function map (array) {
+// function map (array) {
 
-    for (i=0; i<array.length; i++) {
-       array[i] *= 5
-    }
-   return array
-}
+//     for (i=0; i<array.length; i++) {
+//        array[i] *= 5
+//     }
+//    return array
+// }
 
-console.log(map(arrForMap))
+// console.log(map(arrForMap))
 
 const objArray = [
     {id: 1, val: 3},
@@ -188,6 +188,26 @@ function myMap (object) {
 }
 
 console.log(myMap(objArray))
+
+//============================================================
+
+function myMapp (arr, callback) {
+
+    let mapArr = [];
+
+    for (i=0; i < arr.length; i++) {
+        // let el = arr[i];
+        mapArr.push(callback(arr[i], i, arr));
+    }
+    return mapArr
+}
+
+console.log(myMapp(arrForMap, (el, i, arr) => {
+    return el*5
+}))
+
+// console.log(myMap(arrForMap))
+
 
 // reduce
 console. log ('----- Reduce start----')
