@@ -61,3 +61,4 @@ class Clock2 {
 
   let clock2 = new Clock2({template: 'h:m:s'});
   clock2.start()
+  clock2.stop()
