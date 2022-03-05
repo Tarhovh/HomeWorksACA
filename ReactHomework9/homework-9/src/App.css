@@ -1,6 +1,14 @@
 .App {
   text-align: start;
 }
+
+img {
+  display: flex;
+  width: 500px;
+  margin-left: 50px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
 /* 
 .App-logo {
   height: 40vmin;

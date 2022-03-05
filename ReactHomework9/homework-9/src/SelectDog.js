@@ -1,20 +1,28 @@
 import React, { useState } from 'react'
+import axios from 'axios'
 
 export const DogSelectDropdown = ({ dogDetector }) => {
   const [currentDog, setCurrentDog] = useState(dogDetector)
+  const [messages, setDogs] = useState([])
   
   const changeDog = (newDog) => {
     setCurrentDog(newDog)
 
-    const Url = `https://dog.ceo/api/breed/${newDog}/image`
-    console.log(Url)
+    axios.get(`https://dog.ceo/api/breed/${newDog}/images`) 
+    .then(res => {
+        // console.log(res.data.message)
+        setDogs(res.data.message)
+    })
   }
   
   return (
+      <div>
     <form>
       <select 
         onChange={(event) => changeDog(event.target.value)}
         value={currentDog}
+
+        
       >
         <option >--Select a breed--</option>
         <option value="akita">Akita</option>
@@ -28,6 +36,13 @@ export const DogSelectDropdown = ({ dogDetector }) => {
         <option value="spaniel/cocker">Cocker Spaniel</option>
       </select>
     </form>
+
+    {
+     messages.map(message => <img src = {message} alt="dog"/>)
+
+}
+    </div>
+
   )
 }
 
