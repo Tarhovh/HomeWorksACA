@@ -8,7 +8,7 @@ function DataFetching() {
     useEffect (() => {
         axios.get('https://ghibliapi.herokuapp.com/films') 
         .then(res => {
-            console.log(res)
+            // console.log(res)
             setFilms(res.data)
         })
         .catch(err => {

@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import axios from 'axios'
 
 export const DogSelectDropdown = ({ dogDetector }) => {
   const [currentDog, setCurrentDog] = useState(dogDetector)
@@ -8,13 +7,16 @@ export const DogSelectDropdown = ({ dogDetector }) => {
   const changeDog = (newDog) => {
     setCurrentDog(newDog)
 
-    axios.get(`https://dog.ceo/api/breed/${newDog}/images`) 
-    .then(res => {
+    fetch(`https://dog.ceo/api/breed/${newDog}/images`) 
+    .then( async(res) => {
+      const json = await res.json()
+      console.log(json)
         // console.log(res.data.message)
-        setDogs(res.data.message)
+        setDogs(json.message)
     })
   }
   
+
   return (
       <div>
     <form>
