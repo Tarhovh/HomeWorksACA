@@ -1,8 +1,6 @@
-import React, { useState, useEffect, useRef, useReducer } from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Loading from "./Loading";
-// import { useSearchParams } from "react"
-// import { render } from 'react-dom';
 
 const Search = () => {
   return <div className="search-header">Find your book!</div>;
@@ -17,39 +15,22 @@ export const SearchBar = () => {
   const [books, setBooks] = useState([]);
   let url = new URL("http://openlibrary.org/search.json");
 
-  // const timerRef = useRef(null);
-
   const changeValue = (newValue) => {
     setCurrentValue(newValue);
 
     fetch(`http://openlibrary.org/search.json?q=${newValue}`).then(
       async (res) => {
         const json = await res.json();
-        //   console.log(json.docs)
-        // console.log(res.data.message)
-        setBooks(json.docs);
         setLoading(true);
+        setBooks(json.docs);
       }
     );
   };
 
-  console.log(loading);
-
   const onSubmit = (event) => {
     changeValue(event.target[0].value);
-    // console.dir(event.target[0].value);
     event.preventDefault();
   };
-
-  const bookEntries = Object.entries(books);
-
-  bookEntries.forEach((key, index, array) => {
-    array.forEach((obj) => {
-      const { key, value } = obj;
-
-      //   console.log(obj[key]);
-    });
-  });
 
   return (
     <form onSubmit={onSubmit} action={url} method="get" target="_blank">
@@ -57,7 +38,6 @@ export const SearchBar = () => {
         <span className="visually-hidden"></span>
       </label>
       <input
-        // onChange={onChange}
         defaultValue={currentValue}
         type="text"
         id="book-search"
@@ -76,8 +56,19 @@ export const SearchBar = () => {
             </ul>
           </ul>
         ))
-      ) : <Loading />
-      }
+      ) : (
+        <Loading />
+      )}
     </form>
   );
 };
+
+//   const bookEntries = Object.entries(books);
+
+//   bookEntries.forEach((key, index, array) => {
+//     array.forEach((obj) => {
+//       const { key, value } = obj;
+
+//       //   console.log(obj[key]);
+//     });
+//   });
