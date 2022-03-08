@@ -9,20 +9,21 @@ const Search = () => {
 export default Search;
 
 export const SearchBar = () => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [currentValue, setCurrentValue] = useState("");
 
   const [books, setBooks] = useState([]);
   let url = new URL("http://openlibrary.org/search.json");
 
   const changeValue = (newValue) => {
+    setLoading(false);
     setCurrentValue(newValue);
 
     fetch(`http://openlibrary.org/search.json?q=${newValue}`).then(
       async (res) => {
         const json = await res.json();
-        setLoading(true);
         setBooks(json.docs);
+        setLoading(true);
       }
     );
   };
